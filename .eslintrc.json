@@ -1,0 +1,54 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:css/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "css"
+    ],
+    "rules": {
+        "linebreak-style": "off",
+        "indent": ["error", 4],
+        "react/jsx-indent-props": [ "error", 4 ],
+        "react/jsx-indent": [ "error", 4 ],
+        "no-unused-vars": "warn",
+        "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-closing-bracket-location": ["error", "after-props"],
+        "import/extensions": [
+            "error",
+            "never",
+            {
+                "tsx": "ignorePackages"
+            }
+        ],
+        "import/no-unresolved": "off",
+        "react/jsx-first-prop-new-line": ["error", "never"],
+        "comma-dangle": ["error", "never"],
+        "react/jsx-tag-spacing": [
+            "error", 
+            {
+                "closingSlash": "never",
+                "beforeSelfClosing": "never",
+                "afterOpening": "never",
+                "beforeClosing": "never"
+            }
+        ],
+        "object-curly-newline": ["error", {"multiline": true}]
+    }
+}
