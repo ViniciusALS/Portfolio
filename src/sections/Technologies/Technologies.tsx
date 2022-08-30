@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+
 import './technologies.css';
+
 import TechCard from '../../components/TechCard/TechCard';
 
 interface Props {}
