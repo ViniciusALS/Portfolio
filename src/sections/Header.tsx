@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 
-import './header.css';
+import Wave from '../components/Wave';
 
-import Wave from '../../components/Wave';
-
-import pirateShip from '../../assets/pirate-ship.svg';
-import wave1 from '../../assets/wave1.svg';
-import wave2 from '../../assets/wave2.svg';
-import wave3 from '../../assets/wave3.svg';
+import pirateShip from '../assets/pirate-ship.svg';
+import wave1 from '../assets/wave1.svg';
+import wave2 from '../assets/wave2.svg';
+import wave3 from '../assets/wave3.svg';
 
 function Header() {
     useEffect(() => {
@@ -80,11 +78,29 @@ function Header() {
         water3: {
             height: '25vh',
             backgroundColor: '#2F80ED'
+        },
+        headerContent: {
+            marginTop: '15%',
+            fontWeight: 700,
+            fontSize: '56px',
+            lineHeight: '56px'
+        },
+        ocean: {
+            position: 'relative',
+            width: '100vw',
+            height: '100vh',
+            overflowX: 'hidden'
+        },
+        ship: {
+            position: 'absolute',
+            transformOrigin: 'center bottom',
+            bottom: '29vh',
+            right: '20%'
         }
     };
 
     return (
-        <div className="ocean">
+        <div style={{ ...styles.ocean }}>
             <Wave
                 className="wave1"
                 src={wave1}
@@ -92,7 +108,11 @@ function Header() {
                 waveStyle={{ ...styles.wave1 }}
                 waterStyle={{ ...styles.water1 }}/>
 
-            <img className="ship" src={pirateShip} alt="ship"/>
+            <img
+                className="ship"
+                style={{ ...styles.ship }}
+                src={pirateShip}
+                alt="ship"/>
 
             <Wave
                 className="wave2"
@@ -108,7 +128,7 @@ function Header() {
                 waveStyle={{ ...styles.wave3 }}
                 waterStyle={{ ...styles.water3 }}/>
 
-            <div className="header-content content">
+            <div className="content" style={{ ...styles.headerContent }}>
                 <h1>Hi,</h1>
                 <h1>I am Vinnie</h1>
             </div>
