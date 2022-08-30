@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './technologies.css';
-import TechnologyCard from '../../components/TechnologyCard/TechnologyCard';
+import TechCard from '../../components/TechCard/TechCard';
 
 interface Props {}
 
@@ -44,7 +44,7 @@ export default class Technologies extends React.Component<Props, State> {
 
         const { technologies } = this.state;
         const technologiesList = technologies.map(
-            tech => <TechnologyCard>{tech.attributes.Name}</TechnologyCard>
+            tech => <TechCard>{tech.attributes.Name}</TechCard>
         );
 
         return (
