@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 import './header.css';
 
-import Waves from '../../components/Waves';
+import Wave from '../../components/Wave';
 
 import pirateShip from '../../assets/pirate-ship.svg';
 import wave1 from '../../assets/wave1.svg';
@@ -64,14 +64,28 @@ function Header() {
         water1: {
             height: '33vh',
             backgroundColor: '#56CCF2'
+        },
+        wave2: {
+            bottom: '26vh',
+            width: '250vw'
+        },
+        water2: {
+            height: '29vh',
+            backgroundColor: '#2D9CDB'
+        },
+        wave3: {
+            bottom: '22vh',
+            width: '200vw'
+        },
+        water3: {
+            height: '25vh',
+            backgroundColor: '#2F80ED'
         }
     } as const;
 
     return (
         <div className="ocean">
-            {/* <img className="wave wave1" src={wave1} alt="wave"/>
-            <div className="water1"/> */}
-            <Waves
+            <Wave
                 className="wave1"
                 src={wave1}
                 alt="wave"
@@ -80,11 +94,19 @@ function Header() {
 
             <img className="ship" src={pirateShip} alt="ship"/>
 
-            <img className="wave wave2" src={wave2} alt="wave"/>
-            <div className="water2"/>
+            <Wave
+                className="wave2"
+                src={wave2}
+                alt="wave"
+                waveStyle={{ ...styles.wave2 }}
+                waterStyle={{ ...styles.water2 }}/>
 
-            <img className="wave wave3" src={wave3} alt="wave"/>
-            <div className="water3"/>
+            <Wave
+                className="wave3"
+                src={wave3}
+                alt="wave"
+                waveStyle={{ ...styles.wave3 }}
+                waterStyle={{ ...styles.water3 }}/>
 
             <div className="header-content content">
                 <h1>Hi,</h1>

@@ -8,7 +8,7 @@ interface Props {
     waterStyle: any
 }
 
-export default function Waves(props: Props) {
+export default function Wave(props: Props) {
     const { src } = props;
     const { alt } = props;
     const { waveStyle } = props;
