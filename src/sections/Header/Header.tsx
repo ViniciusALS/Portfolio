@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-
 import { gsap } from 'gsap';
 
 import './header.css';
+
+import Waves from '../../components/Waves';
 
 import pirateShip from '../../assets/pirate-ship.svg';
 import wave1 from '../../assets/wave1.svg';
@@ -55,10 +56,27 @@ function Header() {
         });
     });
 
+    const styles = {
+        wave1: {
+            bottom: '30vh',
+            width: '300vw'
+        },
+        water1: {
+            height: '33vh',
+            backgroundColor: '#56CCF2'
+        }
+    } as const;
+
     return (
         <div className="ocean">
-            <img className="wave wave1" src={wave1} alt="wave"/>
-            <div className="water1"/>
+            {/* <img className="wave wave1" src={wave1} alt="wave"/>
+            <div className="water1"/> */}
+            <Waves
+                className="wave1"
+                src={wave1}
+                alt="wave"
+                waveStyle={{ ...styles.wave1 }}
+                waterStyle={{ ...styles.water1 }}/>
 
             <img className="ship" src={pirateShip} alt="ship"/>
 
