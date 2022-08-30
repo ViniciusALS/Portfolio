@@ -15,7 +15,7 @@ export default function Wave(props: Props) {
     const { waterStyle } = props;
     const { className } = props;
 
-    const styles = {
+    const styles: { [key: string]: React.CSSProperties } = {
         wave: {
             position: 'absolute',
             left: 0,
@@ -28,7 +28,7 @@ export default function Wave(props: Props) {
             left: 0,
             width: '100%'
         }
-    } as const;
+    };
 
     return (
         <>

@@ -56,7 +56,7 @@ function Header() {
         });
     });
 
-    const styles = {
+    const styles: { [key: string]: React.CSSProperties } = {
         wave1: {
             bottom: '30vh',
             width: '300vw'
@@ -81,7 +81,7 @@ function Header() {
             height: '25vh',
             backgroundColor: '#2F80ED'
         }
-    } as const;
+    };
 
     return (
         <div className="ocean">
