@@ -1,0 +1,19 @@
+.TechnologiesSection {
+    height: 50vh;
+    /* background: linear-gradient(180deg, #2F80ED 0%, #272935 30%);
+    background-blend-mode: darken; */
+}
+
+.TechnologiesSection li {
+    list-style: none;
+}
+
+.TechnologiesSection ul {
+    display: inline-block;
+    padding: 1em;
+    width: 100px;
+    height: 100px;
+    border: 1px white dotted;
+    margin: 1em;
+    text-align:justify;
+}

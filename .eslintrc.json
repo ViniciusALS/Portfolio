@@ -41,7 +41,7 @@
         "react/jsx-first-prop-new-line": ["error", "never"],
         "comma-dangle": ["error", "never"],
         "react/jsx-tag-spacing": [
-            "error", 
+            "error",
             {
                 "closingSlash": "never",
                 "beforeSelfClosing": "never",
@@ -49,6 +49,16 @@
                 "beforeClosing": "never"
             }
         ],
-        "object-curly-newline": ["error", {"multiline": true}]
+        "object-curly-newline": ["error", {"consistent": true}],
+        "no-plusplus": "off",
+        "prefer-destructuring": [
+            "error",
+            {
+                "array": false,
+                "object": false
+            }
+        ],
+        "max-len": "off",
+        "arrow-parens": ["error", "as-needed"]
     }
 }
