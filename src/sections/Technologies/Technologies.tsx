@@ -48,7 +48,7 @@ export default class Technologies extends React.Component<Props, State> {
         );
 
         return (
-            <div className="TechnologiesSection">
+            <div className="TechnologiesSection content">
                 <h2>Technologies</h2>
 
                 { technologiesParagraphs }

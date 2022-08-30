@@ -47,7 +47,7 @@ export default class About extends React.Component<Props, State> {
         const aboutMeParagraph = aboutMeText.map(paragraph => <p>{ paragraph }</p>);
 
         return (
-            <div className="about-section">
+            <div className="about-section content">
                 <h2>About me</h2>
 
                 { aboutMeParagraph }
