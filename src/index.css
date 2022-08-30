@@ -6,8 +6,8 @@ body {
     color: white;
 }
 
-.content {
-    padding: 0 20%;
+li {
+    list-style: none;
 }
 
 h2 {
@@ -19,4 +19,8 @@ h2 {
 p {
     padding-bottom: 1em;
     line-height: 1.7em;
+}
+
+.content {
+    padding: 0 20%;
 }
