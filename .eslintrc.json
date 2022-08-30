@@ -38,7 +38,7 @@
             }
         ],
         "import/no-unresolved": "off",
-        "react/jsx-first-prop-new-line": ["error", "never"],
+        "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
         "comma-dangle": ["error", "never"],
         "react/jsx-tag-spacing": [
             "error",
