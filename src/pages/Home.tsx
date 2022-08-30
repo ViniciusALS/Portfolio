@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import About from '../components/about/About';
-import TechnologiesSection from '../components/TechnologiesSection/TechnologiesSection';
+import Header from '../sections/Header/Header';
+import About from '../sections/About/About';
+import Technologies from '../sections/Technologies/Technologies';
 
 function Home() {
     return (
         <>
             <Header/>
             <About/>
-            <TechnologiesSection/>
+            <Technologies/>
         </>
     );
 }

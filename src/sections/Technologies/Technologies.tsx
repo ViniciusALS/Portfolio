@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import './technologiesSection.css';
-import TechnologyCard from '../TechnologyCard/TechnologyCard';
+import './technologies.css';
+import TechnologyCard from '../../components/TechnologyCard/TechnologyCard';
 
 interface Props {}
 
@@ -10,7 +10,7 @@ interface State {
     technologies: any[]
 }
 
-export default class TechnologiesSection extends React.Component<Props, State> {
+export default class Technologies extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {

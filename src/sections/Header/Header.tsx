@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { gsap } from 'gsap';
 
-import './Header.css';
+import './header.css';
 
 import pirateShip from '../../assets/pirate-ship.svg';
 import wave1 from '../../assets/wave1.svg';
@@ -68,7 +68,7 @@ function Header() {
             <img className="wave wave3" src={wave3} alt="wave"/>
             <div className="water3"/>
 
-            <div className="header-content">
+            <div className="header-content content">
                 <h1>Hi,</h1>
                 <h1>I am Vinnie</h1>
             </div>
