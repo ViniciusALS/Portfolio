@@ -56,28 +56,16 @@ function Header() {
 
     const styles: { [key: string]: React.CSSProperties } = {
         wave1: {
-            bottom: '30vh',
+            borderBottom: '30vh solid #56CCF2',
             width: '300vw'
         },
-        water1: {
-            height: '33vh',
-            backgroundColor: '#56CCF2'
-        },
         wave2: {
-            bottom: '26vh',
+            borderBottom: '26vh solid #2D9CDB',
             width: '250vw'
         },
-        water2: {
-            height: '29vh',
-            backgroundColor: '#2D9CDB'
-        },
         wave3: {
-            bottom: '22vh',
+            borderBottom: '22vh solid #2F80ED',
             width: '200vw'
-        },
-        water3: {
-            height: '25vh',
-            backgroundColor: '#2F80ED'
         },
         headerContent: {
             marginTop: '15%',
@@ -104,9 +92,7 @@ function Header() {
             <Wave
                 className="wave1"
                 src={wave1}
-                alt="wave"
-                waveStyle={{ ...styles.wave1 }}
-                waterStyle={{ ...styles.water1 }}/>
+                style={{ ...styles.wave1 }}/>
 
             <img
                 className="ship"
@@ -117,16 +103,12 @@ function Header() {
             <Wave
                 className="wave2"
                 src={wave2}
-                alt="wave"
-                waveStyle={{ ...styles.wave2 }}
-                waterStyle={{ ...styles.water2 }}/>
+                style={{ ...styles.wave2 }}/>
 
             <Wave
                 className="wave3"
                 src={wave3}
-                alt="wave"
-                waveStyle={{ ...styles.wave3 }}
-                waterStyle={{ ...styles.water3 }}/>
+                style={{ ...styles.wave3 }}/>
 
             <div className="content" style={{ ...styles.headerContent }}>
                 <h1>Hi,</h1>
