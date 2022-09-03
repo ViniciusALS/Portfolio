@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './techCard.module.css';
 
 interface Props {
     children: any
@@ -7,17 +8,5 @@ interface Props {
 export default function TechnolyCard(props: Props) {
     const { children } = props;
 
-    const styles: { [key: string]: React.CSSProperties } = {
-        ul: {
-            display: 'inline-block',
-            padding: '1em',
-            width: '100px',
-            height: '100px',
-            border: '1px white dotted',
-            margin: '1em',
-            textAlign: 'justify'
-        }
-    };
-
-    return (<ul style={styles.ul}>{ children }</ul>);
+    return (<ul className={styles.card}>{ children }</ul>);
 }
