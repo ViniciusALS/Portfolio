@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 import styles from './header.module.css';
 
-import Wave from '../../components/Wave';
+import Wave from '../../components/Wave/Wave';
 
 import pirateShip from '../../assets/pirate-ship.svg';
 

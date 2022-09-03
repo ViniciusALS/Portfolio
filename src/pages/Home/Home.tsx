@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../sections/Header/Header';
-import About from '../sections/About';
-import Technologies from '../sections/Technologies';
+import Header from '../../sections/Header/Header';
+import About from '../../sections/About/About';
+import Technologies from '../../sections/Technologies/Technologies';
 
 function Home() {
     return (
