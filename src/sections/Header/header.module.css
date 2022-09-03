@@ -12,6 +12,24 @@
     overflow-x: hidden;
 }
 
+.wave1 {
+    width: 300vw;
+    color: #56CCF2;
+    border-bottom: 30vh solid #56CCF2;
+}
+
+.wave2 {
+    width: 250vw;
+    color: #2D9CDB;
+    border-bottom: 26vh solid #2D9CDB;
+}
+
+.wave3 {
+    width: 200vw;
+    color: #2F80ED;
+    border-bottom: 22vh solid #2F80ED;
+}
+
 .ship {
     position: absolute;
     transform-origin: center bottom;

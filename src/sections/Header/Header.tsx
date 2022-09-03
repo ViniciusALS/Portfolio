@@ -55,16 +55,16 @@ function Header() {
 
     return (
         <div className={styles.ocean}>
-            <Wave className="wave1" waveWidth="300vw" color="#56CCF2" waveHeight="30vh"/>
+            <Wave className={`wave1 ${styles.wave1}`}/>
 
             <img
                 className={`ship ${styles.ship}`}
                 src={pirateShip}
                 alt="ship"/>
 
-            <Wave className="wave2" waveWidth="250vw" color="#2D9CDB" waveHeight="26vh"/>
+            <Wave className={`wave2 ${styles.wave2}`}/>
 
-            <Wave className="wave3" waveWidth="200vw" color="#2F80ED" waveHeight="22vh"/>
+            <Wave className={`wave3 ${styles.wave3}`}/>
 
             <div className={`content ${styles.headerContent}`}>
                 <h1>Hi,</h1>

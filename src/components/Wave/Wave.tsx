@@ -1,35 +1,16 @@
 import React from 'react';
+import styles from './wave.module.css';
 
 interface Props {
-    className: string,
-    color: string,
-    waveHeight: string,
-    waveWidth: string
+    className: string
 }
 
 export default function Wave(props: Props) {
     const { className } = props;
-    const { color } = props;
-    const { waveHeight } = props;
-    const { waveWidth } = props;
-
-    const componentStyles: { [key: string]: React.CSSProperties } = {
-        wave: {
-            position: 'absolute',
-            left: 0,
-            bottom: 0,
-            height: '9vh',
-            width: waveWidth,
-            color: color,
-            fill: 'currentcolor',
-            borderBottom: `${waveHeight} solid ${color}`
-        }
-    };
 
     return (
         <svg
-            style={componentStyles.wave}
-            className={className}
+            className={`${className} ${styles.wave}`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 762 52.917"
             preserveAspectRatio="none">
