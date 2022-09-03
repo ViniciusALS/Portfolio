@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 
-import './header.css';
+import styles from './header.module.css';
 
 import Wave from '../../components/Wave';
 
