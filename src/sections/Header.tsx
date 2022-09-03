@@ -4,9 +4,6 @@ import { gsap } from 'gsap';
 import Wave from '../components/Wave';
 
 import pirateShip from '../assets/pirate-ship.svg';
-import wave1 from '../assets/wave1.svg';
-import wave2 from '../assets/wave2.svg';
-import wave3 from '../assets/wave3.svg';
 
 function Header() {
     useEffect(() => {
