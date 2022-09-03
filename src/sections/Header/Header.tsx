@@ -58,7 +58,7 @@ function Header() {
             <Wave className="wave1" waveWidth="300vw" color="#56CCF2" waveHeight="30vh"/>
 
             <img
-                className={styles.ship}
+                className={`ship ${styles.ship}`}
                 src={pirateShip}
                 alt="ship"/>
 
