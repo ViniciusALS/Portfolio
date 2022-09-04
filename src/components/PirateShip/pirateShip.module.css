@@ -1,0 +1,6 @@
+.ship {
+    position: absolute;
+    transform-origin: center bottom;
+    bottom: 29vh;
+    right: 20%;
+}
