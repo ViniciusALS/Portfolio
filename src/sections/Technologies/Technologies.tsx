@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+import Content from '../../components/Content/Content';
 import TechCard from '../../components/TechCard/TechCard';
 
 interface Props {}
@@ -48,7 +49,7 @@ export default class Technologies extends React.Component<Props, State> {
         );
 
         return (
-            <div className="TechnologiesSection content">
+            <Content className="TechnologiesSection">
                 <h2>Technologies</h2>
 
                 { technologiesParagraphs }
@@ -56,7 +57,7 @@ export default class Technologies extends React.Component<Props, State> {
                 <li>
                     {technologiesList}
                 </li>
-            </div>
+            </Content>
         );
     }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import Content from '../../components/Content/Content';
+
 interface Props {}
 
 interface SocialMedia {
@@ -47,11 +49,11 @@ export default class About extends React.Component<Props, State> {
         const aboutMeParagraph = aboutMeText.map(paragraph => <p>{ paragraph }</p>);
 
         return (
-            <div className="about-section content">
+            <Content className="about-section">
                 <h2>About me</h2>
 
                 { aboutMeParagraph }
-            </div>
+            </Content>
         );
     }
 }
