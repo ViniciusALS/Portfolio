@@ -29,10 +29,3 @@
     color: #2F80ED;
     border-bottom: 22vh solid #2F80ED;
 }
-
-.ship {
-    position: absolute;
-    transform-origin: center bottom;
-    bottom: 29vh;
-    right: 20%;
-}

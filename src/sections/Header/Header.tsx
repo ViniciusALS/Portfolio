@@ -4,8 +4,7 @@ import { gsap } from 'gsap';
 import styles from './header.module.css';
 
 import Wave from '../../components/Wave/Wave';
-
-import pirateShip from '../../assets/pirate-ship.svg';
+import PirateShip from '../../components/PirateShip/PirateShip';
 
 function Header() {
     useEffect(() => {
@@ -43,24 +42,13 @@ function Header() {
             yoyo: true,
             yoyoEase: true
         });
-
-        gsap.fromTo('.header-content', {
-            x: -500
-        }, {
-            x: 0,
-            duration: 1,
-            ease: 'power1'
-        });
     });
 
     return (
         <div className={styles.ocean}>
             <Wave className={`wave1 ${styles.wave1}`}/>
 
-            <img
-                className={`ship ${styles.ship}`}
-                src={pirateShip}
-                alt="ship"/>
+            <PirateShip className="ship"/>
 
             <Wave className={`wave2 ${styles.wave2}`}/>
 
