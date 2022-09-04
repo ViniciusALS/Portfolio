@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import styles from './header.module.css';
 
 import Content from '../../components/Content/Content';
+import Ocean from '../../components/Ocean/Ocean';
 import Wave from '../../components/Wave/Wave';
 import PirateShip from '../../components/PirateShip/PirateShip';
 
@@ -46,7 +47,7 @@ function Header() {
     });
 
     return (
-        <div className={styles.ocean}>
+        <Ocean>
             <Wave className={`wave1 ${styles.wave1}`}/>
 
             <PirateShip className="ship"/>
@@ -59,7 +60,7 @@ function Header() {
                 <h1>Hi,</h1>
                 <h1>I am Vinnie</h1>
             </Content>
-        </div>
+        </Ocean>
     );
 }
 
