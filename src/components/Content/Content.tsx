@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './content.module.css';
 
 interface Props {
-    className: string,
+    className?: string,
     children: any
 }
 
@@ -16,3 +16,7 @@ export default function Content(props: Props) {
         </div>
     );
 }
+
+Content.defaultProps = {
+    className: ''
+};
