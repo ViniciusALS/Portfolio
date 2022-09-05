@@ -1,59 +1,23 @@
 import React from 'react';
-import axios from 'axios';
 
 import Content from '../../components/Content/Content';
 
-interface Props {}
+export default function About() {
+    return (
+        <Content>
+            <h2>About me</h2>
 
-interface SocialMedia {
-    id: Number,
-    URL: String,
-    Hypertext?: String,
-    IsLink: Boolean
-}
+            <p>
+                Hi, I am Vinicius Souza. I am an Electronics Engineering Technologist and a self taught programmer. I have always been passionate about solving problems and I found in electronics and programming a place to channel that passion.
+            </p>
 
-interface State {
-    aboutMeText: String[],
-    socialMedias: SocialMedia[]
-}
+            <p>
+                I like learning about new technologies to bring my projects to life and on this portfolio I will try to show my projects and the things that I learned with then. For example, when I was in college I got very involved with the IEEE engineering club where I learned a lot with my pears about different problems in computer science and electronics. The most fun I had at the time definitely came when learning about algorithms & data structures and then later when teaching this subject to new club members. This experience definitely changed my view on how I approach problems.
+            </p>
 
-export default class About extends React.Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            aboutMeText: [],
-            socialMedias: []
-        };
-    }
-
-    componentDidMount() {
-        axios.get('http://localhost:1337/api/home-page-about?populate=SocialMedia')
-            .then(response => {
-                const data = response.data.data.attributes;
-                const aboutMeText: String[] = data.body.split('\n');
-                const socialMedias: SocialMedia[] = data.SocialMedia;
-
-                this.setState({
-                    aboutMeText,
-                    socialMedias
-                });
-            })
-            .catch(error => {
-                // eslint-disable-next-line no-console
-                console.log(error);
-            });
-    }
-
-    render() {
-        const { aboutMeText, socialMedias } = this.state;
-        const aboutMeParagraph = aboutMeText.map(paragraph => <p>{ paragraph }</p>);
-
-        return (
-            <Content className="about-section">
-                <h2>About me</h2>
-
-                { aboutMeParagraph }
-            </Content>
-        );
-    }
+            <p>
+                Nowadays my interests orbit around things like web development, data analysis, and robotics. I like how those technologies give me power to create new things and I also really appreciate how they have very strong online communities.
+            </p>
+        </Content>
+    );
 }
