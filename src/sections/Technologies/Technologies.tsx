@@ -1,63 +1,34 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+
+import TechnologiesService from '../../services/TechnologiesService';
 
 import Content from '../../components/Content/Content';
 import TechCard from '../../components/TechCard/TechCard';
 
-interface Props {}
+import ITechnologies from '../../types/ITechnologies';
 
-interface State {
-    technologiesText: String[],
-    technologies: any[]
-}
+export default function Technologies() {
+    const [technologies, setTechnologies] = useState<ITechnologies[]>([]);
 
-export default class Technologies extends React.Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            technologiesText: [],
-            technologies: []
-        };
-    }
-
-    componentDidMount() {
-        axios.get('http://localhost:1337/api/home-page-technology')
-            .then(response => {
-                const technologiesText = response.data.data.attributes.body.split('\n');
-
-                this.setState({ technologiesText });
-            })
-            .catch(error => {
-                // eslint-disable-next-line no-console
-                console.log(error);
-            });
-        axios.get('http://localhost:1337/api/technologies?populate=Logo')
-            .then(response => {
-                const technologies = response.data.data;
-                this.setState({ technologies });
-            })
+    useEffect(() => {
+        TechnologiesService.findAll()
+            .then(response => setTechnologies(response))
             .catch();
-    }
+    });
 
-    render() {
-        const { technologiesText } = this.state;
-        const technologiesParagraphs = technologiesText.map(paragraph => <p>{ paragraph }</p>);
+    return (
+        <Content className="TechnologiesSection">
+            <h2>Technologies</h2>
 
-        const { technologies } = this.state;
-        const technologiesList = technologies.map(
-            tech => <TechCard>{tech.attributes.Name}</TechCard>
-        );
+            <p>Over the course of my studies I have used many different technologies on my projects. You can check the things I have build with them bellow.</p>
 
-        return (
-            <Content className="TechnologiesSection">
-                <h2>Technologies</h2>
-
-                { technologiesParagraphs }
-
-                <li>
-                    {technologiesList}
-                </li>
-            </Content>
-        );
-    }
+            <li>
+                {
+                    technologies.map(
+                        tech => <TechCard>{tech.attributes.Name}</TechCard>
+                    )
+                }
+            </li>
+        </Content>
+    );
 }
