@@ -11,7 +11,7 @@ const apiClient = axios.create({
 });
 
 const findAll = async () => {
-    const response = await apiClient.get<IResponse<ITechnologies>>('/technologies');
+    const response = await apiClient.get<IResponse<ITechnologies[]>>('/technologies');
     return response.data.data;
 };
 
