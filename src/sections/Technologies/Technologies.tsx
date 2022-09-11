@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import TechnologiesService from '../../services/TechnologiesService';
 
 import Content from '../../components/Content/Content';
-import TechCard from '../../components/TechCard/TechCard';
+import TechCarousel from '../../components/TechCarousel/TechCarousel';
 
 import ITechnologies from '../../types/ITechnologies';
 
@@ -22,13 +22,7 @@ export default function Technologies() {
 
             <p>Over the course of my studies I have used many different technologies on my projects. You can check the things I have build with them bellow.</p>
 
-            <li>
-                {
-                    technologies.map(
-                        tech => <TechCard>{tech.attributes.Name}</TechCard>
-                    )
-                }
-            </li>
+            <TechCarousel technologies={technologies}/>
         </Content>
     );
 }
