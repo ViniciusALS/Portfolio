@@ -5,10 +5,10 @@ import TechnologiesService from '../../services/TechnologiesService';
 import Content from '../../components/Content/Content';
 import TechCarousel from '../../components/TechCarousel/TechCarousel';
 
-import ITechnologies from '../../types/ITechnologie';
+import ITechnology from '../../types/ITechnology';
 
 export default function Technologies() {
-    const [technologies, setTechnologies] = useState<ITechnologies[]>([]);
+    const [technologies, setTechnologies] = useState<ITechnology[]>([]);
 
     useEffect(() => {
         TechnologiesService.findAll()

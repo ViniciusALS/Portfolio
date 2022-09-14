@@ -1,5 +1,5 @@
 import IResponse from './IResponse';
-import ITechnologies from './ITechnologie';
+import ITechnology from './ITechnology';
 import IImage from './IImage';
 
 // TODO: rename types to modules
@@ -9,7 +9,7 @@ interface IProject {
         Title: string,
         Content: string,
         Description: string,
-        technologies: IResponse<ITechnologies>[],
+        technologies: IResponse<ITechnology>[],
         Cover: IResponse<IImage>
     }
 }
