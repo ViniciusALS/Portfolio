@@ -11,12 +11,16 @@ const apiClient = axios.create({
 });
 
 const findAll = async () => {
-    const response = await apiClient.get<IResponse<ITechnologies[]>>('/technologies');
+    const response = await apiClient.get<IResponse<ITechnologies[]>>(
+        '/technologies?populate=Logo'
+    );
     return response.data.data;
 };
 
 const findByID = async (id: any) => {
-    const response = await apiClient.get<IResponse<ITechnologies>>(`/technologies/${id}`);
+    const response = await apiClient.get<IResponse<ITechnologies>>(
+        `/technologies/${id}?populate=Logo`
+    );
     return response.data.data;
 };
 
