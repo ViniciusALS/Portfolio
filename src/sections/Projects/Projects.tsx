@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Content from '../../components/Content/Content';
 import ProjectsService from '../../services/ProjectsService';
 import IProjects from '../../types/IProjects';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 export default function Projects() {
     const [projects, setProjects] = useState<IProjects[]>([]);
@@ -16,15 +17,21 @@ export default function Projects() {
         <Content>
             <h2>Projects</h2>
 
-            <div>
-                <h3>Project Title</h3>
-                <div>Image</div>
-                <div>Project description</div>
-                <div>Technologies list</div>
-                <div>learn more</div>
-                <div>Github link</div>
-                <div>Live project</div>
-            </div>
+            {
+                projects.map(
+                    project => (
+                        <ProjectCard>
+                            <h3>{project.attributes.Title}</h3>
+                            <div>{project.attributes.Cover.data.attributes.url}</div>
+                            <div>{project.attributes.Description}</div>
+                            <div>Technologies list</div>
+                            <div>learn more</div>
+                            <div>Github link</div>
+                            <div>Live project</div>
+                        </ProjectCard>
+                    )
+                )
+            }
         </Content>
     );
 }
