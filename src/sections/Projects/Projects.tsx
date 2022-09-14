@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Content from '../../components/Content/Content';
-import ProjectsService from '../../services/TechnologiesService';
-import IProjects from '../../types/ITechnologies';
+import ProjectsService from '../../services/ProjectsService';
+import IProjects from '../../types/IProjects';
 
 export default function Projects() {
     const [projects, setProjects] = useState<IProjects[]>([]);
