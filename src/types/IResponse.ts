@@ -1,6 +1,6 @@
 interface IResponse<T> {
     data: T,
-    meta: any
+    meta?: any
 }
 
 export default IResponse;
