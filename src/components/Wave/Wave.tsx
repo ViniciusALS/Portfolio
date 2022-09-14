@@ -7,7 +7,7 @@ interface Props {
 
 export default function Wave(props: Props) {
     const { className } = props;
-
+    // TODO: try finding a better way to display svg
     return (
         <svg
             className={`${className} ${styles.wave}`}
