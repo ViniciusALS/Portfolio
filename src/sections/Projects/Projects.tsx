@@ -20,7 +20,7 @@ export default function Projects() {
             {
                 projects.map(
                     project => (
-                        <ProjectCard>
+                        <ProjectCard key={project.id}>
                             <h3>{project.attributes.Title}</h3>
                             <div>{project.attributes.Cover.data.attributes.url}</div>
                             <div>{project.attributes.Description}</div>
