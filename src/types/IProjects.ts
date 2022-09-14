@@ -1,6 +1,6 @@
 // TODO: break into smaller interfaces
 // TODO: rename types to modules
-export default interface IProjects {
+interface IProject {
     id: number,
     attributes: {
         Title: string,
@@ -35,6 +35,6 @@ export default interface IProjects {
             }
         }
     }
-// eslint-disable-next-line semi
 }
-// TODO: fix eslint error
+
+export default IProject;

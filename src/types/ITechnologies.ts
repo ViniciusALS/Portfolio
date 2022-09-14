@@ -1,7 +1,8 @@
-export default interface ITechnologies {
+interface ITechnologies {
     id: number,
     attributes: {
         Name: string
     }
-// eslint-disable-next-line semi
 }
+
+export default ITechnologies;

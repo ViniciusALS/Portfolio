@@ -1,5 +1,6 @@
-export default interface IResponse<T> {
+interface IResponse<T> {
     data: T,
     meta: any
-// eslint-disable-next-line semi
 }
+
+export default IResponse;
