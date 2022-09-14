@@ -4,9 +4,10 @@ import Slider from 'react-slick';
 import './slick-carousel.css';
 
 import TechCard from '../../components/TechCard/TechCard';
+import ITechnology from '../../types/ITechnology';
 
 interface Props {
-    technologies: any[] // TODO: create proper interface
+    technologies: ITechnology[]
 }
 
 export default function TechCarousel(props: Props) {
