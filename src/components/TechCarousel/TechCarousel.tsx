@@ -30,7 +30,15 @@ export default function TechCarousel(props: Props) {
             <Slider {...settings}>
                 {
                     technologies.map(
-                        tech => <TechCard>{tech.attributes.Name}</TechCard>
+                        tech => {
+                            const techImgURL = tech.attributes.Logo?.data.attributes.url;
+                            return (
+                                <TechCard key={tech.id}>
+                                    <img src={`http://localhost:1337${techImgURL}`} alt=""/>
+                                    <h3>{tech.attributes.Name}</h3>
+                                </TechCard>
+                            );
+                        }
                     )
                 }
             </Slider>
