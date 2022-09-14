@@ -6,7 +6,7 @@ import './slick-carousel.css';
 import TechCard from '../../components/TechCard/TechCard';
 
 interface Props {
-    technologies: any[]
+    technologies: any[] // TODO: create proper interface
 }
 
 export default function TechCarousel(props: Props) {
