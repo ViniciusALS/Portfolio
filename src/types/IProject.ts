@@ -1,4 +1,7 @@
-// TODO: break into smaller interfaces
+import IResponse from './IResponse';
+import ITechnologies from './ITechnologie';
+import IImage from './IImage';
+
 // TODO: rename types to modules
 interface IProject {
     id: number,
@@ -6,34 +9,8 @@ interface IProject {
         Title: string,
         Content: string,
         Description: string,
-        technologies: {
-            data: {
-                id: number,
-                attributes: {
-                    Name: string,
-                    Logo: {
-                        data: {
-                            id: number,
-                            attributes: {
-                                name: string,
-                                width: number,
-                                height: number,
-                                url: string
-                            }
-                        }
-                    }
-                }
-            }[]
-        },
-        Cover: {
-            data: {
-                id: number,
-                attributes: {
-                    name: string,
-                    url: string
-                }
-            }
-        }
+        technologies: IResponse<ITechnologies>[],
+        Cover: IResponse<IImage>
     }
 }
 

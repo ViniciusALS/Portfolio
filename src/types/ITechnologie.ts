@@ -1,7 +1,11 @@
+import IResponse from './IResponse';
+import IImage from './IImage';
+
 interface ITechnologies {
     id: number,
     attributes: {
-        Name: string
+        Name: string,
+        Logo?: IResponse<IImage>
     }
 }
 
