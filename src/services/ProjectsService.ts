@@ -20,9 +20,10 @@ const findByID = async (id: any) => {
     return response.data.data;
 };
 
-const TechnologiesService = {
+// TODO: Refactor code as class
+const ProjectsService = {
     findAll,
     findByID
 };
 
-export default TechnologiesService;
+export default ProjectsService;
