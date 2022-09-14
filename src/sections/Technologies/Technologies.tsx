@@ -5,7 +5,7 @@ import TechnologiesService from '../../services/TechnologiesService';
 import Content from '../../components/Content/Content';
 import TechCarousel from '../../components/TechCarousel/TechCarousel';
 
-import ITechnologies from '../../types/ITechnologies';
+import ITechnologies from '../../types/ITechnologie';
 
 export default function Technologies() {
     const [technologies, setTechnologies] = useState<ITechnologies[]>([]);

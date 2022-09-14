@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Content from '../../components/Content/Content';
 import ProjectsService from '../../services/ProjectsService';
-import IProjects from '../../types/IProjects';
+import IProject from '../../types/IProject';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 export default function Projects() {
-    const [projects, setProjects] = useState<IProjects[]>([]);
+    const [projects, setProjects] = useState<IProject[]>([]);
 
     useEffect(() => {
         ProjectsService.findAll()

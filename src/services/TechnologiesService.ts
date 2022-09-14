@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import IResponse from '../types/IResponse';
-import ITechnologies from '../types/ITechnologies';
+import ITechnologies from '../types/ITechnologie';
 
 const apiClient = axios.create({
     baseURL: 'http://localhost:1337/api/',
