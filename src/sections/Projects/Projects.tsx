@@ -19,17 +19,7 @@ export default function Projects() {
 
             {
                 projects.map(
-                    project => (
-                        <ProjectCard key={project.id}>
-                            <h3>{project.attributes.Title}</h3>
-                            <div>{project.attributes.Cover.data.attributes.url}</div>
-                            <div>{project.attributes.Description}</div>
-                            <div>Technologies list</div>
-                            <div>learn more</div>
-                            <div>Github link</div>
-                            <div>Live project</div>
-                        </ProjectCard>
-                    )
+                    project => <ProjectCard key={project.id} project={project}/>
                 )
             }
         </Content>
