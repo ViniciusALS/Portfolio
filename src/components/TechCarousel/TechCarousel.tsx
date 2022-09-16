@@ -32,9 +32,10 @@ export default function TechCarousel(props: Props) {
                     technologies.map(
                         tech => {
                             const techImgURL = tech.attributes.Logo?.data.attributes.url;
+                            const imgURL = process.env.REACT_APP_IMG_URL_PREFIX! + techImgURL;
                             return (
                                 <TechCard key={tech.id}>
-                                    <img src={`http://localhost:1337${techImgURL}`} alt=""/>
+                                    <img src={imgURL} alt=""/>
                                     <h3>{tech.attributes.Name}</h3>
                                 </TechCard>
                             );

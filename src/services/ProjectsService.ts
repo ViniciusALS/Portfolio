@@ -4,7 +4,7 @@ import IResponse from '../types/IResponse';
 import IProject from '../types/IProject';
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:1337/api/',
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
         'Content-type': 'application/json'
     }
