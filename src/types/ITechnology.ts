@@ -1,7 +1,7 @@
 import IResponse from './IResponse';
 import IImage from './IImage';
 
-interface ITechnologies {
+interface ITechnology {
     id: number,
     attributes: {
         Name: string,
@@ -9,4 +9,4 @@ interface ITechnologies {
     }
 }
 
-export default ITechnologies;
+export default ITechnology;
