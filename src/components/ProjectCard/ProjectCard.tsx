@@ -10,7 +10,7 @@ export default function ProjectCard(props: Props) {
     const { project } = props;
 
     return (
-        <div className={styles.techCard}>
+        <div className={styles.card}>
             <h3>{project.attributes.Title}</h3>
             <div>{project.attributes.Cover.data.attributes.url}</div>
             <div>{project.attributes.Description}</div>
