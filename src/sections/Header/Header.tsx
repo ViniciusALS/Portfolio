@@ -14,9 +14,9 @@ function Header() {
 
             <PirateShip className="ship"/>
 
-            <Wave className={styles.wave2} waveSpeed={20}/>
+            <Wave className={styles.wave2} waveSpeed={25}/>
 
-            <Wave className={styles.wave3} waveSpeed={20}/>
+            <Wave className={styles.wave3} waveSpeed={30}/>
 
             <Content className={styles.headerContent}>
                 <h1>Hi,</h1>
