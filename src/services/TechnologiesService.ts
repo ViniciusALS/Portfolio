@@ -10,23 +10,20 @@ const apiClient = axios.create({
     }
 });
 
-const findAll = async () => {
-    const response = await apiClient.get<IResponse<ITechnology[]>>(
-        '/technologies?populate=Logo'
-    );
-    return response.data.data;
-};
+class TechnologiesService {
+    static async findAll() {
+        const response = await apiClient.get<IResponse<ITechnology[]>>(
+            '/technologies?populate=Logo'
+        );
+        return response.data.data;
+    }
 
-const findByID = async (id: any) => {
-    const response = await apiClient.get<IResponse<ITechnology>>(
-        `/technologies/${id}?populate=Logo`
-    );
-    return response.data.data;
-};
-
-const TechnologiesService = {
-    findAll,
-    findByID
-};
+    static async findByID(id: Number) {
+        const response = await apiClient.get<IResponse<ITechnology>>(
+            `/technologies/${id}?populate=Logo`
+        );
+        return response.data.data;
+    }
+}
 
 export default TechnologiesService;

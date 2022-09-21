@@ -10,24 +10,20 @@ const apiClient = axios.create({
     }
 });
 
-const findAll = async () => {
-    const response = await apiClient.get<IResponse<IProject[]>>(
-        '/projects/?populate[technologies][populate][0]=Logo&populate=Cover'
-    );
-    return response.data.data;
-};
+class ProjectsService {
+    static async findAll() {
+        const response = await apiClient.get<IResponse<IProject[]>>(
+            '/projects/?populate[technologies][populate][0]=Logo&populate=Cover'
+        );
+        return response.data.data;
+    }
 
-const findByID = async (id: any) => {
-    const response = await apiClient.get<IResponse<IProject>>(
-        `/projects/${id}?populate[technologies][populate][0]=Logo&populate=Cover`
-    );
-    return response.data.data;
-};
-
-// TODO: Refactor code as class
-const ProjectsService = {
-    findAll,
-    findByID
-};
+    static async findByID(id: Number) {
+        const response = await apiClient.get<IResponse<IProject>>(
+            `/projects/${id}?populate[technologies][populate][0]=Logo&populate=Cover`
+        );
+        return response.data.data;
+    }
+}
 
 export default ProjectsService;
