@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import SvgAnimation from '../../utilities/SvgAnimation';
 import styles from './wave.module.css';
 
 interface Props {
-    className: string
+    className: string,
+    waveName: string,
+    waveSpeed: gsap.TweenValue
 }
 
 export default function Wave(props: Props) {
     const { className } = props;
+    const { waveSpeed } = props;
+    const { waveName } = props;
     // TODO: try finding a better way to display svg
+    useEffect(() => {
+        SvgAnimation.moveWave(waveName, waveSpeed);
+    }, [waveName, waveSpeed]);
+
     return (
         <svg
             className={`${className} ${styles.wave}`}

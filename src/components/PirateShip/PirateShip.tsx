@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import SvgAnimation from '../../utilities/SvgAnimation';
 import styles from './pirateShip.module.css';
 
 interface Props {
@@ -7,6 +8,12 @@ interface Props {
 
 export default function Wave(props: Props) {
     const { className } = props;
+    const shipName = `.${className}`;
+
+    useEffect(() => {
+        SvgAnimation.shipEnterScreen(shipName);
+        SvgAnimation.rockShip(shipName);
+    }, [shipName]);
 
     return (
         <svg className={`${className} ${styles.ship}`} width="465" height="424" viewBox="0 0 465 424" fill="none" xmlns="http://www.w3.org/2000/svg">
