@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
 
 import styles from './header.module.css';
 
@@ -8,42 +7,16 @@ import Ocean from '../../components/Ocean/Ocean';
 import Wave from '../../components/Wave/Wave';
 import PirateShip from '../../components/PirateShip/PirateShip';
 
+import SvgAnimation from '../../utilities/SvgAnimation';
+
 function Header() {
     useEffect(() => {
-        gsap.to('.wave1', {
-            duration: 20,
-            repeat: -1,
-            transform: 'translate(-50%, 0)'
-        });
+        SvgAnimation.moveWave('.wave1', 20);
+        SvgAnimation.moveWave('.wave2', 25);
+        SvgAnimation.moveWave('.wave3', 30);
 
-        gsap.to('.wave2', {
-            duration: 25,
-            repeat: -1,
-            transform: 'translate(-50%, 0)'
-        });
-
-        gsap.to('.wave3', {
-            duration: 30,
-            repeat: -1,
-            transform: 'translate(-50%, 0%)'
-        });
-
-        gsap.fromTo('.ship', { x: 1000 }, {
-            x: 0,
-            duration: 2,
-            ease: 'power1'
-        });
-
-        gsap.fromTo('.ship', {
-            transform: 'translate(50%, 0%) rotate(-5deg)'
-        }, {
-            duration: 3,
-            repeat: -1,
-            transform: 'translate(50%, 0%) rotate(4deg)',
-            ease: 'power1.out',
-            yoyo: true,
-            yoyoEase: true
-        });
+        SvgAnimation.shipEnterScreen('.ship');
+        SvgAnimation.rockShip('.ship');
     });
 
     return (
