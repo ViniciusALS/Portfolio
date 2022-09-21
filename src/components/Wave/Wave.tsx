@@ -5,14 +5,13 @@ import styles from './wave.module.css';
 
 interface Props {
     className: string,
-    waveName: string,
     waveSpeed: gsap.TweenValue
 }
 
 export default function Wave(props: Props) {
     const { className } = props;
     const { waveSpeed } = props;
-    const { waveName } = props;
+    const waveName = `.${className}`;
     // TODO: try finding a better way to display svg
     useEffect(() => {
         SvgAnimation.moveWave(waveName, waveSpeed);
