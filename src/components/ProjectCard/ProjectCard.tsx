@@ -18,7 +18,6 @@ export default function ProjectCard(props: Props) {
             <h3>{project.attributes.Title}</h3>
             <img src={imgURL} alt={coverImgAltText}/>
             <div>{project.attributes.Description}</div>
-            <div>Technologies list</div>
             <div>learn more</div>
             <div>Github link</div>
             <div>Live project</div>
