@@ -12,8 +12,7 @@ export default function Technologies() {
 
     useEffect(() => {
         TechnologiesService.findAll()
-            .then(response => setTechnologies(response))
-            .catch(); // TODO: handle error response
+            .then(response => setTechnologies(response));
     }, []);
 
     return (
