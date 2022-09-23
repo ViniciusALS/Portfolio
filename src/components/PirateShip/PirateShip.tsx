@@ -1,22 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import SvgAnimation from '../../utilities/SvgAnimation';
 import styles from './pirateShip.module.css';
 
-interface Props {
-    className: string
-}
-
-export default function Wave(props: Props) {
-    const { className } = props;
-    const shipName = `.${className}`;
+export default function Wave() {
+    const elementRef = useRef<any>();
 
     useEffect(() => {
-        SvgAnimation.shipEnterScreen(shipName);
-        SvgAnimation.rockShip(shipName);
-    }, [shipName]);
+        SvgAnimation.shipEnterScreen(elementRef.current);
+        SvgAnimation.rockShip(elementRef.current);
+    });
 
     return (
-        <svg className={`${className} ${styles.ship}`} width="465" height="424" viewBox="0 0 465 424" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg ref={elementRef} className={styles.ship} width="465" height="424" viewBox="0 0 465 424" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M164.7 420.4H368.3C424 399.5 449.1 358.5 449.1 305.4C449.1 302.1 448.9 298.7 448.7 295.4C420.8 299.9 391.5 302.5 361.2 303C353 330.6 327.4 350.6 297.1 350.6H226.1C208.3 350.6 193.9 336.3 193.9 318.6V313.4H192C174.2 313.4 159.8 298.9 159.8 281.2V265.6C133.4 261.8 109.3 255.7 87.8 247.7C84.8 258.9 83.1001 270.6 83.1001 282.6C83.0001 348.5 108.9 397.1 164.7 420.4Z" fill="#83321C"/>
             <path d="M159.7 281.1V265.5C133.3 261.7 109.2 255.6 87.7 247.6C84.7 258.8 83 270.5 83 282.5C83 286.9 83.1 291.1 83.3 295.4L177.8 310.2C167.1 304.9 159.7 293.8 159.7 281.1Z" fill="#A54125"/>
             <path d="M324.5 344.7C316.1 348.5 306.9 350.5 297.1 350.5H226.1C219.2 350.5 212.8 348.3 207.5 344.7H92.6C104.6 379.2 128.3 405.2 164.7 420.4H368.3C409.3 405 433.7 378.7 443.7 344.7H324.5Z" fill="#76220A"/>
