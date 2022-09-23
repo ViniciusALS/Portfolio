@@ -11,7 +11,7 @@ export default function Projects() {
         ProjectsService.findAll()
             .then(response => setProjects(response))
             .catch(); // TODO: handle response error
-    });
+    }, []);
 
     return (
         <Content>

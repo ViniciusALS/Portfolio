@@ -14,7 +14,7 @@ export default function Technologies() {
         TechnologiesService.findAll()
             .then(response => setTechnologies(response))
             .catch(); // TODO: handle error response
-    });
+    }, []);
 
     return (
         <Content className="TechnologiesSection">
