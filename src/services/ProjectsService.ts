@@ -12,10 +12,15 @@ const apiClient = axios.create({
 
 class ProjectsService {
     static async findAll() {
-        const response = await apiClient.get<IResponse<IProject[]>>(
-            '/projects/?populate[technologies][populate][0]=Logo&populate=Cover'
-        );
-        return response.data.data;
+        try {
+            const response = await apiClient.get<IResponse<IProject[]>>(
+                '/projects/?populate[technologies][populate][0]=Logo&populate=Cover'
+            );
+            return response.data.data;
+        }
+        catch (error) {
+            return [];
+        }
     }
 
     static async findByID(id: Number) {
@@ -27,3 +32,5 @@ class ProjectsService {
 }
 
 export default ProjectsService;
+
+// FIXME: use react useref to prevent infinite api call when page render
