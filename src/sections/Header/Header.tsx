@@ -3,16 +3,15 @@ import React from 'react';
 import styles from './header.module.css';
 
 import Content from '../../components/Content/Content';
-import Ocean from '../../components/Ocean/Ocean';
 import Wave from '../../components/Wave/Wave';
 import PirateShip from '../../components/PirateShip/PirateShip';
 
 function Header() {
     return (
-        <Ocean>
+        <div className={styles.ocean}>
             <Wave className={styles.wave1} waveSpeed={20}/>
 
-            <PirateShip className="ship"/>
+            <PirateShip/>
 
             <Wave className={styles.wave2} waveSpeed={25}/>
 
@@ -22,7 +21,7 @@ function Header() {
                 <h1>Hi,</h1>
                 <h1>I am Vinnie</h1>
             </Content>
-        </Ocean>
+        </div>
     );
 }
 
