@@ -32,5 +32,3 @@ class ProjectsService {
 }
 
 export default ProjectsService;
-
-// FIXME: use react useref to prevent infinite api call when page render
