@@ -60,6 +60,7 @@
         ],
         "max-len": "off",
         "arrow-parens": ["error", "as-needed"],
-        "object-shorthand": ["error", "consistent"]
+        "object-shorthand": ["error", "consistent"],
+        "brace-style": ["error", "stroustrup"]
     }
 }
