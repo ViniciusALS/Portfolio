@@ -9,8 +9,7 @@ export default function Projects() {
 
     useEffect(() => {
         ProjectsService.findAll()
-            .then(response => setProjects(response))
-            .catch(); // TODO: handle response error
+            .then(response => setProjects(response));
     }, []);
 
     return (
