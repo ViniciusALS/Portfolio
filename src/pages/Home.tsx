@@ -1,7 +1,17 @@
 import React from 'react';
+import { Hero, Technologies, About, Projects, Footer } from '../sections';
+import { Navbar } from '../components';
 
 export default function Home() {
     return(
-        <h1>Home</h1>
+        <>
+            <Navbar/>
+
+            <Hero/>
+            <Technologies/>
+            <About/>
+            <Projects/>
+            <Footer/>
+        </>
     );
 }
