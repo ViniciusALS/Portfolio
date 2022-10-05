@@ -9,3 +9,10 @@
 html, body {
 	background-color: #F2F2F2;
 }
+
+@layer components {
+	.content {
+		@apply px-[10px] ss:px-[10%] lg:px-[15%]
+	}
+
+}
