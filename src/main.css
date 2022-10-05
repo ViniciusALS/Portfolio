@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 html, body {
@@ -15,4 +15,7 @@ html, body {
 		@apply px-[10px] ss:px-[10%] lg:px-[15%]
 	}
 
+	.smallCaps {
+		font-variant: small-caps;
+	}
 }
