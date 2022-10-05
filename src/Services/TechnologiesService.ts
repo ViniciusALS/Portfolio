@@ -4,7 +4,7 @@ import IResponse from '../types/IResponse';
 import ITechnology from '../types/ITechnology';
 
 const apiClient = axios.create({
-    baseURL: import.meta.env.REACT_APP_API_URL,
+    baseURL: 'http://localhost:1337/api',
     headers: {
         'Content-type': 'application/json'
     }
