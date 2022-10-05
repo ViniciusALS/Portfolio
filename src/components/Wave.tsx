@@ -1,3 +1,5 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import { wave } from '../assets';
 
 interface Props {
@@ -5,10 +7,21 @@ interface Props {
     waveSpeed: gsap.TweenValue
 }
 
-export default function Wave() {
+export default function Wave(props: Props) {
+    const elementRef = useRef<any>();
+
+    useEffect(() => {
+        gsap.to(elementRef.current, {
+            duration: props.waveSpeed,
+            repeat: -1,
+            transform: 'translate(-50%, 0)'
+        });
+    });
+
     return(
         <div className={`${props.className} absolute bottom-0`}>
             <svg
+                ref={elementRef}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 762 52.917"
                 preserveAspectRatio="none"
