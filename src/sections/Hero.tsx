@@ -10,29 +10,10 @@ export default function Hero() {
                 <span>I am Vinicius</span>
             </h1>
 
-            {/* <div>
-                <Wave/>
-                <Ship/>
-                <Wave/>
-                <Wave/>
-            </div> */}
-
-            <div className='flex flex-row w-full justify-evenly content'>
-                <ContactButton
-                    src={linkedIn}
-                    alt='LinkedIn'
-                    text='Add me on LinkedIn'/>
-
-                <ContactButton
-                    src={twitter}
-                    alt='Twitter'
-                    text='Follow me on Twitter'/>
-
-                <ContactButton
-                    src={resume}
-                    alt='Resume'
-                    text='Download my resume'/>
-            </div>
+            <Wave className='wave3' waveSpeed={50}/>
+            <Ship />
+            <Wave className='wave2' waveSpeed={45}/>
+            <Wave className='wave1' waveSpeed={40}/>
 
         </section>
     );

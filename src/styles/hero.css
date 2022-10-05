@@ -1,0 +1,43 @@
+.wave1 {
+    @apply fill-blueOne;
+    width: 300vw;
+}
+
+.wave1 svg {
+    height: 7vh;
+}
+
+.wave1 div {
+    height: 20vh;
+    @apply bg-blueOne;
+}
+
+
+.wave2 {
+    @apply fill-blueTwo;
+    width: 300vw;
+}
+
+.wave2 svg {
+    height: 10vh;
+}
+
+.wave2 div {
+    height: 20vh;
+    @apply bg-blueTwo;
+}
+
+
+.wave3 {
+    @apply fill-blueThree;
+    width: 300vw;
+}
+
+.wave3 svg {
+    height: 13vh;
+}
+
+.wave3 div {
+    height: 20vh;
+    @apply bg-blueThree;
+}
