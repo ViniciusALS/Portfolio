@@ -1,6 +1,6 @@
 import React from 'react';
 import {linkedIn, twitter, resume} from '../assets';
-import { Ship, Wave, ContactButton } from '../components';
+import { Ship, Wave } from '../components';
 import '../styles/hero.css';
 
 export default function Hero() {
