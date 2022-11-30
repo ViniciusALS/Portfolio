@@ -5,6 +5,7 @@ interface ITechnology {
     id: number,
     attributes: {
         Name: string,
+        Color: string,
         Logo?: IResponse<IImage>
     }
 }
