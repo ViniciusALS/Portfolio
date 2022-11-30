@@ -8,7 +8,9 @@ interface IProject {
         Title: string,
         Content: string,
         Description: string,
-        technologies: IResponse<ITechnology>[],
+        LiveProject: string,
+        SourceCode: string,
+        Technologies: IResponse<ITechnology[]>,
         Cover: IResponse<IImage>
     }
 }
