@@ -14,7 +14,7 @@ class ProjectsService {
     static async findAll() {
         try {
             const response = await apiClient.get<IResponse<IProject[]>>(
-                '/projects/?populate[technologies][populate][0]=Logo&populate=Cover'
+                '/projects/?populate[Technologies][populate][0]=Logo&populate=Cover'
             );
             return response.data.data;
         }
@@ -25,7 +25,7 @@ class ProjectsService {
 
     static async findByID(id: Number) {
         const response = await apiClient.get<IResponse<IProject>>(
-            `/projects/${id}?populate[technologies][populate][0]=Logo&populate=Cover`
+            `/projects/${id}?populate[Technologies][populate][0]=Logo&populate=Cover`
         );
         return response.data.data;
     }
