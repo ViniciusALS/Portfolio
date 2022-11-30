@@ -1,4 +1,3 @@
-import BulletPoint from './BulletPoint';
 import Navbar from './Navbar';
 import ProjectCard from './ProjectCard';
 import Ship from './Ship';
@@ -12,6 +11,5 @@ export {
     Ship,
     TechCard,
     TechCarousel,
-    Wave,
-    BulletPoint
+    Wave
 }
