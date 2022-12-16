@@ -29,6 +29,18 @@ class ProjectsService {
         );
         return response.data.data;
     }
+
+    static async findBySlug(slug: string) {
+        try {
+            const response = await apiClient.get<IResponse<IProject>>(
+                `/projects?filters[slug][$eq]=${slug}&populate[Technologies][populate][0]=Logo&populate=Cover`
+            );
+            return response.data.data;
+        }
+        catch (error) {
+            return;
+        }
+    }
 }
 
 export default ProjectsService;
