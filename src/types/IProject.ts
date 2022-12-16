@@ -11,7 +11,8 @@ interface IProject {
         LiveProject: string,
         SourceCode: string,
         Technologies: IResponse<ITechnology[]>,
-        Cover: IResponse<IImage>
+        Cover: IResponse<IImage>,
+        slug: string
     }
 }
 
